@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/imageCarousel.css">
     <script defer src="js/verticalNavBar.js"></script>
     <script defer src="js/autoImageCarousel.js"></script>
+    <script defer src="js/imageCarosuel.js"></script>
     <title>C J SPURR BUILDERS LTD</title>
 </head>
 
@@ -36,7 +37,7 @@
         <a href="#">CONTACT</a>
     </div>
     <section>
-        <div class="slideshow-container">
+        <div class="slideshow-container full-width">
             <div class="mySlides fade">
                 <img src="images/Albro-Lane-Algies-Bay-3.jpg">
             </div>
@@ -50,15 +51,15 @@
             </div>
 
             <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)">
+                <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
-                <span class="dot" onclick="currentSlide(2)">
+                <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
-                <span class="dot" onclick="currentSlide(3)">
+                <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
@@ -70,18 +71,61 @@
             <br><br><br><br>
             <div style="display: contents;">
                 <h1>C J SPURR BUILDERS LTD</h1>
-                <h2>NEW BUILDS &nbsp; • &nbsp; PROJECT MANAGEMENT &nbsp; • &nbsp; RENOVATIONS &nbsp; • &nbsp; LANDSCAPING</h2>
+                <h2>NEW BUILDS &nbsp; • &nbsp; PROJECT MANAGEMENT &nbsp; • &nbsp; RENOVATIONS &nbsp; • &nbsp;
+                    LANDSCAPING</h2>
                 <br>
                 <a class="button dark-bg">CONTACT US</a>
                 <br><br>
             </div>
         </div>
     </section>
-    <section>
-        <p>At C J Spurr Builders Warkworth, we have been delivering high quality, personalised residential construction services to our clients for over 25 years. We build strong, long-standing houses and strong, long-standing personal relationships with our homeowners around the greater Rodney region.</p>
-        <p>We project manage and build architecturally designed new homes, renovate existing homes and also build outdoor landscaping structures such as decks, cabanas, stairs, and sheds.</p>
-        <p>As local Rodney builders, we have worked with clients in Warkworth, Algies Bay, Kaipara, Leigh, Mahurangi West, Mangawhai, Matakana, Maungataroto, Omaha, Pakiri, Rainbows End, Riverhead, Sandspit, Scotts Landing, Snells Beach and Tawharanui to name a few places.</p>
-        <a class="button light-bg">ABOUT US</a>
+    <section
+        style="display: grid; grid-auto-columns: 1fr; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0px 0px; grid-template-areas:&quot;slideshow content&quot;&quot;slideshow button&quot;;">
+        <div class="slideshow-container square-gallery" style="grid-area: slideshow;">
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-2.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-4.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-6.jpg">
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+
+            <div class="dot-container">
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+            </div>
+        </div>
+        <div style="grid-area: content;">
+            <p>At C J Spurr Builders Warkworth, we have been delivering high quality, personalised residential
+                construction services to our clients for over 25 years. We build strong, long-standing houses and
+                strong, long-standing personal relationships with our homeowners around the greater Rodney region.</p>
+            <p>We project manage and build architecturally designed new homes, renovate existing homes and also build
+                outdoor landscaping structures such as decks, cabanas, stairs, and sheds.</p>
+            <p>As local Rodney builders, we have worked with clients in Warkworth, Algies Bay, Kaipara, Leigh, Mahurangi
+                West, Mangawhai, Matakana, Maungataroto, Omaha, Pakiri, Rainbows End, Riverhead, Sandspit, Scotts
+                Landing, Snells Beach and Tawharanui to name a few places.</p>
+        </div>
+        <div style="grid-area: button;">
+            <br>
+            <a class="button light-bg">ABOUT US</a>
+        </div>
     </section>
 </body>
 
