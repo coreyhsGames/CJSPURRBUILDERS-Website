@@ -123,6 +123,14 @@ body {
     bottom: 180px;
 }
 
+.slideshow-container .lbp-logo {
+    width: 150px;
+    position: absolute;
+    right: 0;
+    top: 23%;
+    margin: 10px;
+}
+
 h1 {
     color: #ffff;
     font-size: 38px;
