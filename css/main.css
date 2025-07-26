@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+br {
+    user-select: none;
+}
+
 .nav-bar-horizontal {
     width: 100%;
     position: fixed;
