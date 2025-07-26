@@ -18,24 +18,49 @@ body {
     align-items: center;
     z-index: 10;
     justify-content: space-between;
+    height: 100px; /* Set initial height */
+    transition: all 0.3s ease; /* Smooth transition for height change */
+}
+
+/* Add a new class for the shrunk state */
+.nav-bar-horizontal.shrink {
+    height: 50px; /* Reduced height */
+        background-color: rgba(0, 0, 0, 0.75);
+}
+
+.nav-bar-horizontal.shrink .logo {
+    width: 200px; /* Smaller logo when shrunk */
+    padding: 15px;
+    transition: all 0.3s ease; /* Smooth transition for logo */
 }
 
 .nav-bar-horizontal a,
 .nav-bar-horizontal .hamburger {
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
     font-size: 1.5rem;
-    transition: background-color 0.5s ease;
-    margin: 0px 5px 0px 5px;
-    border-radius: 0.77vh;
+    transition: all 0.3s ease; /* Changed to 'all' for smoother transitions */
+    margin: 0px 3px 0px 3px;
+    border-radius: 10px;
     cursor: pointer;
+}
+
+/* Reduce padding when shrunk */
+.nav-bar-horizontal.shrink a,
+.nav-bar-horizontal.shrink .hamburger {
+    padding: 8px 12px;
+    font-size: 1.3rem;
 }
 
 .nav-bar-horizontal .hamburger {
     font-size: 2.5rem;
     display: none;
+}
+
+.nav-bar-horizontal.shrink .hamburger {
+    font-size: 2rem; /* Smaller hamburger icon */
 }
 
 .nav-bar-horizontal a:hover,
@@ -51,10 +76,11 @@ body {
 
 .logo {
     width: 400px;
-    margin: 15px;
+    padding: 15px;
+    transition: all 0.3s ease; /* Smooth transition for logo */
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1550px) {
     .nav-bar-horizontal .hamburger {
         position: absolute;
         display: block;
@@ -63,6 +89,15 @@ body {
 
     .nav-bar-horizontal a {
         display: none;
+    }
+    
+    /* Adjust for mobile when shrunk */
+    .nav-bar-horizontal.shrink {
+        height: 45px;
+    }
+    
+    .nav-bar-horizontal.shrink .hamburger {
+        font-size: 1.8rem;
     }
 }
 
@@ -151,6 +186,7 @@ h2 {
     border-radius: 10px;
     transition: all 0.5s ease;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .button.dark-bg {
