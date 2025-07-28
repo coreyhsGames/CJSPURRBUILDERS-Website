@@ -29,13 +29,14 @@
 .slideshow-container.square-gallery {
     width: 500px;
     height: 400px;
+    border-radius: 13px;
+    border: 2px solid #212121;
 }
 
 .slideshow-container.square-gallery .mySlides img {
     object-fit: cover;
     height: 400px;
     width: 100%;
-    border: 2px solid #212121;
     border-radius: 10px;
 }
 
@@ -52,7 +53,7 @@
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px;
     user-select: none;
 }
 
