@@ -1,0 +1,31 @@
+.our-services h1 {
+    margin: 25px;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    color: #ffff;
+    margin: 0px 12px 0px 12px;
+    transition: all 150ms ease;
+}
+
+.services-card img {
+    height: 55%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #b6b6b6;
+    margin-bottom: 10px;
+}
+
+.services-card:hover {
+    transform: scale(1.05);
+}
