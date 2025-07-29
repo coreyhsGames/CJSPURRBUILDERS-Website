@@ -29,3 +29,8 @@
 .services-card:hover {
     transform: scale(1.05);
 }
+
+.quote {
+    width: 225px;
+    margin: 30px;
+}
