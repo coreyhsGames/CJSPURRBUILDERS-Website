@@ -285,7 +285,7 @@ p {
     fill: white;
     margin: 0 8px 0 8px;
     transition: transform 150ms ease;
-    width: 2vw;
+    width: 30px;
 }
 
 .footer-2 .social-links svg:hover {
@@ -300,7 +300,8 @@ p {
     width: 200px;
 }
 
-.contact-phone, .contact-email {
+.contact-phone,
+.contact-email {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -309,18 +310,53 @@ p {
     transition: transform 150ms ease;
 }
 
-.contact-phone:hover, .contact-email:hover {
+.contact-phone:hover,
+.contact-email:hover {
     transform: scale(1.1);
 }
 
-.contact-phone svg, .contact-email svg {
+.contact-phone svg,
+.contact-email svg {
     fill: white;
-    width: 2.5vw;
+    width: 30px;
     margin: 0 5px 0 5px;
 }
 
-.contact-phone a, .contact-email a {
+.contact-phone a,
+.contact-email a {
     color: white;
     text-decoration: none;
     font-weight: 800;
+}
+
+.services-summary-2 {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .services-summary-1 {
+        display: none;
+    }
+
+    .services-summary-2 {
+        display: block;
+    }
+
+    .grey .top.logo {
+        bottom: 275px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .footer-1 {
+        flex-direction: column;
+    }
+
+    #what-our-clients-say {
+        flex-direction: column;
+    }
+
+    #what-our-clients-say div {
+        justify-content: center;
+    }
 }
