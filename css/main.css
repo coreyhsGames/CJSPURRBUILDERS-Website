@@ -333,6 +333,12 @@ p {
     display: none;
 }
 
+.quote-header {
+    position: absolute;
+    max-width: 75%;
+    font-style: italic;
+}
+
 @media only screen and (max-width: 1024px) {
     .services-summary-1 {
         display: none;
@@ -352,12 +358,22 @@ p {
         flex-direction: column;
     }
 
+    .contact-container {
+        width: 100%;
+    }
+
     #what-our-clients-say {
         flex-direction: column;
     }
 
     #what-our-clients-say div {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .quote-header {
+        max-width: 90%;
     }
 }
 

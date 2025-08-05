@@ -74,3 +74,10 @@
         width: 80%;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .quote {
+        margin: 10px;
+        width: 125px;
+    }
+}
