@@ -46,6 +46,16 @@
     margin-left: 20px;
 }
 
+@media only screen and (max-width: 1024px) {
+    .services-summary-1 {
+        display: none;
+    }
+
+    .services-summary-2 {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .services-container {
         flex-direction: column;
