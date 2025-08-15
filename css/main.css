@@ -52,7 +52,7 @@ br {
 .nav-bar-horizontal.shrink {
     height: 60px;
     /* Reduced height */
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .nav-bar-horizontal.shrink .logo {
