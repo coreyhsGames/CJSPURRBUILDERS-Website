@@ -188,6 +188,11 @@ br {
     position: relative;
 }
 
+.grey .div-center .content > p {
+    color: #ffff;
+    text-align: left;
+}
+
 .grey .top.logo {
     width: 150px;
     position: absolute;
