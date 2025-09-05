@@ -240,6 +240,11 @@ p {
     text-decoration: none;
 }
 
+.button.lighter-grey-bg {
+    background-color: #e1e1e1;
+}
+
+
 .button.light-grey-bg {
     background-color: #5d5d5d;
 }
