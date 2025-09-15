@@ -51,3 +51,22 @@
     width: 175px;
     margin: 30px;
 }
+
+@media only screen and (max-width: 900px) {
+    .our-projects .div-center, .about-us .div-center {
+        flex-direction: column;
+    }
+
+    .our-projects .slideshow-container.square-gallery, .about-us .slideshow-container.square-gallery {
+        width: 85%;
+        margin: 0px;
+    }
+
+    .our-projects .content, .about-us .content {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+}
