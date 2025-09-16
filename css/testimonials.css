@@ -15,6 +15,55 @@
     margin-right: 20px;
 }
 
+.testimonial-carousel {
+    position: relative;
+    margin: auto;
+    margin: 10px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial {
+    margin: 5px;
+    padding: 10px;
+    width: 45%;
+    background-color: #ffff;
+    border: 2px solid #cacaca;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-rows: 1fr 0.25fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "quote review-content"
+        ". review-author";
+}
+
+.quote {
+    grid-area: quote;
+    width: 100%;
+}
+
+.review-content {
+    grid-area: review-content;
+}
+
+.review-author {
+    grid-area: review-author;
+}
+
+.testimonial-count {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    margin-bottom: -40px;
+    width: 100%;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 900px) {
     .about-us .div-center {
         flex-direction: column;
