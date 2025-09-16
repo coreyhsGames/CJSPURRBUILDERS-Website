@@ -81,4 +81,13 @@
         align-items: center;
         width: 80%;
     }
+
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 75%;
+    }
 }
