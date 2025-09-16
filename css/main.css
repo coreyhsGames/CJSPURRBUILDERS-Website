@@ -240,6 +240,10 @@ p {
     text-decoration: none;
 }
 
+.button.slim {
+    padding: 5px
+}
+
 .button.lighter-grey-bg {
     background-color: #e1e1e1;
 }
