@@ -6,6 +6,7 @@ form input, form textarea {
     border-radius: 10px;
     font-family: 'Montserrat';
     font-size: 1rem;
+    resize: none;
 }
 
 .contact-us-container {
@@ -44,7 +45,7 @@ form input, form textarea {
     margin-left: 20px;
 }
 
-.contact-form {
+#contact-form {
     width: 50%;
     margin-right: 20px;
 }
@@ -62,7 +63,7 @@ form input, form textarea {
         width: 80%;
     }
 
-    .contact-form {
+    #contact-form {
         width: 75%;
         margin-right: 0px;
     }

@@ -87,17 +87,15 @@
         <h1 style="color: #000; text-align: center;">WE ARE LOCAL BUILDERS AND WE ARE AS FOCUSED ON THE CREATION OF YOUR
             HOME AS YOU ARE</h1>
         <div class="div-center">
-            <div class="contact-form">
-                <form action="#">
-                    <input type="text" id="fname" name="firstname" placeholder="First Name (Required)">
-                    <input type="text" id="lname" name="lastname" placeholder="Last Name (Required)">
-                    <input type="text" id="phnumber" name="phonenumber" placeholder="Phone Number (Required)">
-                    <input type="email" id="email" name="email" placeholder="Email (Required)">
-                    <textarea rows="5" id="msg" name="message" placeholder="Message"></textarea>
-                    <br>
-                    <button class="button light-bg" type="submit">GET IN TOUCH</button>
-                </form>
-            </div>
+            <form id="contact-form">
+                <input type="text" id="fname" name="firstName" placeholder="First Name (Required)">
+                <input type="text" id="lname" name="lastName" placeholder="Last Name (Required)">
+                <input type="text" id="phnumber" name="phoneNum" placeholder="Phone Number (Required)">
+                <input type="email" id="email" name="email" placeholder="Email (Required)">
+                <textarea rows="5" id="msg" name="msg" placeholder="Message (Required)"></textarea>
+                <br>
+                <button class="button light-bg" type="submit">GET IN TOUCH</button>
+            </form>
             <div class="content">
                 <p>As builders in Warkworth, we have built and renovated homes in Algies Bay, Kaipara, Leigh, Mahurangi
                     West, Mangawhai, Matakana, Maungataroto, Omaha, Pakiri, Rainbows End, Riverhead, Sandspit, Scotts
@@ -189,6 +187,34 @@
             </div>
         </div>
     </footer>
+    <script>
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // stop normal form POST
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const res = await fetch('/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const text = await res.text();
+                alert(text);
+
+
+                if (res.ok) form.reset();
+            } catch (err) {
+                console.error('Error:', err);
+                alert("Something went wrong.");
+            }
+        });
+    </script>
 </body>
+
 
 </html>
