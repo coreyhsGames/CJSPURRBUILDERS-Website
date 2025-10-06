@@ -1,0 +1,22 @@
+{
+  "name": "cjspurrbuilders-website",
+  "version": "1.0.0",
+  "description": "This is a repository for the redesign of the C J SPURR BUILDERS LTD website.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreyhsGames/CJSPURRBUILDERS-Website.git"
+  },
+  "author": "coreyhsGames",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coreyhsGames/CJSPURRBUILDERS-Website/issues"
+  },
+  "homepage": "https://github.com/coreyhsGames/CJSPURRBUILDERS-Website#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

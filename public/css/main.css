@@ -298,10 +298,13 @@ p {
 }
 
 .footer-2 .social-links svg {
-    fill: white;
     margin: 0 8px 0 8px;
     transition: transform 150ms ease;
     width: 30px;
+}
+
+.footer-2 .social-links svg path {
+    fill: #ffff;
 }
 
 .footer-2 .social-links svg:hover {
