@@ -78,7 +78,7 @@
                 </h2>
                 <div class="photo-grid">
                   <% project.photos.forEach(photo=> { %>
-                    <img src="<%= photo %>" alt="<%= project.name %>" draggable="false">
+                    <a href="<%= photo %>"><img src="<%= photo %>" alt="<%= project.name %>" draggable="false"></a>
                     <% }) %>
                 </div>
               </div>
