@@ -26,7 +26,7 @@ const contactFormDB = new sqlite3.Database("src/db/contactForm.db", (err) => {
         console.log("Connected to the contact form database!");
     }
 });
-contactFormDB.run(`CREATE TABLE IF NOT EXISTS contactForm (id INTEGER PRIMARY KEY AUTOINCREMENT, firstName TEXT, lastName TEXT, phoneNum INTEGER, email TEXT, msg TEXT)`);
+contactFormDB.run(`CREATE TABLE IF NOT EXISTS contactForm (id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, phone_num INTEGER, email TEXT, msg TEXT)`);
 
 const projectsDB = new sqlite3.Database("src/db/projects.db", (err) => {
     if (err) {
@@ -46,17 +46,17 @@ app.get("/", (req, res) => {
 
 // Contact form submission (POST)
 app.post("/contact", (req, res) => {
-  const { firstName, lastName, phoneNum, email, msg } = req.body;
+  const { first_name, last_name, phone_num, email, msg } = req.body;
 
-  if (!firstName || !lastName || !phoneNum || !email || !msg) {
+  if (!first_name || !last_name || !phone_num || !email || !msg) {
     return res.status(400).send("All fields are required.");
   }
 
   const query = `
-    INSERT INTO contactForm (firstName, lastName, phoneNum, email, msg)
+    INSERT INTO contactForm (first_name, last_name, phone_num, email, msg)
     VALUES (?, ?, ?, ?, ?)
   `;
-  contactFormDB.run(query, [firstName, lastName, phoneNum, email, msg], err => {
+  contactFormDB.run(query, [first_name, last_name, phone_num, email, msg], err => {
     if (err) {
       console.error(err);
       return res.status(500).send("Error saving your message.");
