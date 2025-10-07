@@ -119,7 +119,9 @@ app.get("/projects/:locationId", (req, res) => {
 });
 
 // 404 page redirect
-app.use((req, res) => res.status(404).render("404"));
+app.use((req, res) => {
+  res.status(404).render("404", { activePage: "" });
+});
 
 // Start the server
 app.listen(PORT, () => {

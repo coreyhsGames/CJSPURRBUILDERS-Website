@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/cj-spurr-icon-w.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/imageCarousel.css">
-    <link rel="stylesheet" href="/css/ourProjects.css">
-    <script defer src="/js/verticalNavBar.js"></script>
-    <script defer src="/js/autoImageCarousel.js"></script>
-  <title><%= location.name %> | C J SPURR BUILDERS LTD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/cj-spurr-icon-w.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/imageCarousel.css">
+  <link rel="stylesheet" href="/css/ourProjects.css">
+  <script defer src="/js/verticalNavBar.js"></script>
+  <script defer src="/js/autoImageCarousel.js"></script>
+  <title>
+    <%= location.name.toUpperCase() %> | C J SPURR BUILDERS LTD
+  </title>
 </head>
 
 <body>
   <%- include('partials/navbar') %>
-  <section>
-        <div class="slideshow-container full-width">
-            <img src="/images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
-            <div class="mySlides fade">
-                <img src="/images/Pukapuka-Road-6.jpg" draggable="false">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="/images/Pukapuka-Road-2.jpg" draggable="false">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="/images/Pukapuka-Road-7.jpg" draggable="false">
-            </div>
-
-            <div class="dot-container" style="margin-left: 15px;">
-                <span class="dot">
-                    <span class="dot-bg"></span>
-                    <span class="dot-fill"></span>
-                </span>
-                <span class="dot">
-                    <span class="dot-bg"></span>
-                    <span class="dot-fill"></span>
-                </span>
-                <span class="dot">
-                    <span class="dot-bg"></span>
-                    <span class="dot-fill"></span>
-                </span>
-            </div>
+    <section>
+      <div class="slideshow-container full-width">
+        <img src="/images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+        <div class="mySlides fade">
+          <img src="/images/Pukapuka-Road-6.jpg" draggable="false">
         </div>
 
-        <div class="grey">
-            <img src="/images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
-            <br><br><br><br>
-            <div style="display: contents;">
-                <h1>OUR PROJECTS</h1>
-                <h2 class="services-summary-1">“WE’VE BEEN BUILDING BEAUTIFUL HOME FOR OVER 25 YEARS.”</h2>
-                <br>
-                <a class="button grey-bg" href="contact.html">CONTACT US</a>
-                <br><br>
-            </div>
+        <div class="mySlides fade">
+          <img src="/images/Pukapuka-Road-2.jpg" draggable="false">
         </div>
+
+        <div class="mySlides fade">
+          <img src="/images/Pukapuka-Road-7.jpg" draggable="false">
+        </div>
+
+        <div class="dot-container" style="margin-left: 15px;">
+          <span class="dot">
+            <span class="dot-bg"></span>
+            <span class="dot-fill"></span>
+          </span>
+          <span class="dot">
+            <span class="dot-bg"></span>
+            <span class="dot-fill"></span>
+          </span>
+          <span class="dot">
+            <span class="dot-bg"></span>
+            <span class="dot-fill"></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grey">
+        <img src="/images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
+        <br><br><br><br>
+        <div style="display: contents;">
+          <h1>OUR PROJECTS</h1>
+          <h2 class="services-summary-1">“WE’VE BEEN BUILDING BEAUTIFUL HOME FOR OVER 25 YEARS.”</h2>
+          <br>
+          <a class="button grey-bg" href="/contact">CONTACT US</a>
+          <br><br>
+        </div>
+      </div>
     </section>
-  <section style="background-color: #e1e1e1;">
-    <br><br>
-    <h1 style="text-align: center; color: #000; text-transform: uppercase;"><%= location.name %> Projects</h1>
-    <div class="project-gallery-container">
-
-      <% if (Object.keys(projects).length === 0) { %>
-        <p style="text-align:center;">No projects available for this location yet.</p>
-      <% } else { %>
-        <% for (let projectId in projects) { 
-             const project = projects[projectId]; %>
-          <div class="project-card">
-            <h2 style="color: #000; text-transform: uppercase;"><%= project.name %></h2>
-            <div class="photo-grid">
-              <% project.photos.forEach(photo => { %>
-                <img src="<%= photo %>" alt="<%= project.name %>" draggable="false">
-              <% }) %>
-            </div>
-          </div>
-        <% } %>
-      <% } %>
-
-    </div>
-  </section>
-  <%- include('partials/footer') %>
+    <section style="background-color: #e1e1e1;">
+      <br><br>
+      <h1 style="text-align: center; color: #000; text-transform: uppercase;">
+        <%= location.name %> Projects
+      </h1>
+      <div class="project-gallery-container">
+        <a class="button white-bg" href="/our-projects">GO BACK</a>
+        <% if (Object.keys(projects).length===0) { %>
+          <p style="text-align:center;">No projects available for this location yet.</p>
+          <% } else { %>
+            <% for (let projectId in projects) { const project=projects[projectId]; %>
+              <div class="project-card">
+                <h2 style="color: #000; text-transform: uppercase;">
+                  <%= project.name %>
+                </h2>
+                <div class="photo-grid">
+                  <% project.photos.forEach(photo=> { %>
+                    <img src="<%= photo %>" alt="<%= project.name %>" draggable="false">
+                    <% }) %>
+                </div>
+              </div>
+              <% } %>
+                <% } %>
+      </div>
+    </section>
+    <%- include('partials/footer') %>
 </body>
+
 </html>
