@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/cj-spurr-icon-w.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/imageCarousel.css">
+    <link rel="stylesheet" href="css/ourProjects.css">
+    <script defer src="js/verticalNavBar.js"></script>
+    <script defer src="js/autoImageCarousel.js"></script>
+    <script defer src="js/imageCarosuel.js"></script>
+    <script defer src="js/shrinkNavBar.js"></script>
+    <title>OUR PROJECTS | C J SPURR BUILDERS LTD</title>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+    <section>
+        <div class="slideshow-container full-width">
+            <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-6.jpg" draggable="false">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-2.jpg" draggable="false">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-7.jpg" draggable="false">
+            </div>
+
+            <div class="dot-container" style="margin-left: 15px;">
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+            </div>
+        </div>
+
+        <div class="grey">
+            <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
+            <br><br><br><br>
+            <div style="display: contents;">
+                <h1>OUR PROJECTS</h1>
+                <h2 class="services-summary-1">“WE’VE BEEN BUILDING BEAUTIFUL HOME FOR OVER 25 YEARS.”</h2>
+                <br>
+                <a class="button grey-bg" href="contact.html">CONTACT US</a>
+                <br><br>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <br><br>
+        <h1 style="color: #000; text-align: center;">OUR BUILDING WORK AND SOME INSPIRATION</h1>
+        <div class="div-center">
+            <div class="slideshow-container square-gallery">
+                <div class="mySlides fade">
+                    <img src="images/Sandspit-Photo-New-1.jpg" draggable="false">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/Baddeleys-Beach-4.jpg" draggable="false">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/Rainbows-End-2.jpg" draggable="false">
+                </div>
+
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+                <div class="dot-container center">
+                    <span class="dot">
+                        <span class="dot-bg"></span>
+                        <span class="dot-fill"></span>
+                    </span>
+                    <span class="dot">
+                        <span class="dot-bg"></span>
+                        <span class="dot-fill"></span>
+                    </span>
+                    <span class="dot">
+                        <span class="dot-bg"></span>
+                        <span class="dot-fill"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="content">
+                <p>We want to share some ideas and houses we thought you would love just as much as we do. We have put
+                    together some images of what we have renovated or built from scratch.
+                </p>
+                <p>As local Rodney residential builders, we take pride in our work and always go the extra mile for our
+                    clients. Making sure everybody is happy is part of what we do.</p>
+                <br>
+                <a class="button light-bg" href="ourServices.html">OUR SERVICES</a>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #e1e1e1;">
+        <br><br>
+        <h1 style="color: #000; text-align: center;">LIST OF PROJECTS</h1>
+        <div class="project-category-container">
+            <% for (let letter in categories) { %>
+                <div class="project-category">
+                    <h3>
+                        <%= letter %>
+                    </h3>
+                    <div class="project-container">
+                        <% categories[letter].forEach(location=> { %>
+                            <a class="button" href="/projects/<%= location.id %>">
+                                <%= location.name %>
+                            </a>
+                            <% }) %>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+        <br>
+    </section>
+    <section class="light grey">
+        <div class="div-center" style="flex-direction: column;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h1 class="quote-header">Looking for inspriation?<br>We can help.</h1>
+                <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="bottom logo"
+                    draggable="false">
+            </div>
+            <p style="color: #ffff; max-width: 60%;">To discuss your plans or make an enquiry about building a new home
+                or a renovation project, call Chris Spurr on <a href="tel:027-276-6639"
+                    style="text-decoration: none; font-weight: 800; color: #ffff;">027 276 6639</a>, your local
+                residential builders In Warkworth.</p>
+            <a class="button light-grey-bg" href="contact.html">CONTACT US</a>
+        </div>
+    </section>
+    <%- include('partials/footer') %>
+</body>
+
+</html>
