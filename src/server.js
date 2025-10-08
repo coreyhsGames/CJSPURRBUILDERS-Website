@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.get("/", (req, res) => res.render("home", { activePage: "home" }));
+app.get("/", (req, res) => res.render("index", { activePage: "home" }));
 app.get("/about", (req, res) => res.render("about", { activePage: "about" }));
 app.get("/our-services", (req, res) => res.render("ourServices", { activePage: "ourServices" }));
 app.get("/contact", (req, res) => res.render("contact", { activePage: "contact" }));
@@ -46,11 +46,6 @@ const testimonialsDB = new sqlite3.Database("src/db/testimonials.db", (err) => {
   }
 });
 testimonialsDB.run(`CREATE TABLE IF NOT EXISTS testimonials (id INTEGER PRIMARY KEY AUTOINCREMENT, author TEXT NOT NULL, location TEXT NOT NULL, message TEXT NOT NULL, date_added DATETIME DEFAULT CURRENT_TIMESTAMP)`);
-
-// Redirect root URL (/) to your home page
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/home.html"));
-});
 
 // Contact form submission (POST)
 app.post("/contact", (req, res) => {
