@@ -17,24 +17,25 @@
 
 .testimonial-carousel {
     position: relative;
-    margin: auto;
     margin: 10px;
 }
 
 .testimonial-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial {
     margin: 5px;
     padding: 10px;
-    width: 45%;
+    width: 75%;
     background-color: #ffff;
     border: 2px solid #cacaca;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 0.3fr 1.7fr;
+    grid-template-columns: 0.2fr 1.8fr;
     grid-template-rows: 1fr 0.25fr;
     gap: 10px 10px;
     grid-template-areas:
@@ -55,13 +56,8 @@
     grid-area: review-author;
 }
 
-.testimonial-count {
-    position: absolute;
-    display: flex;
-    bottom: 0px;
-    margin-bottom: -40px;
-    width: 100%;
-    justify-content: center;
+.testimonial-text {
+  white-space: pre-line;
 }
 
 @media only screen and (max-width: 900px) {

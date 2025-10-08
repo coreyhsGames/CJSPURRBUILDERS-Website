@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/cj-spurr-icon-w.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/imageCarousel.css">
+    <link rel="stylesheet" href="/css/ourProjects.css">
+    <script defer src="/js/verticalNavBar.js"></script>
+    <script defer src="/js/autoImageCarousel.js"></script>
+    <title>TESTIMONIALS | C J SPURR BUILDERS LTD</title>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+        <section>
+            <div class="slideshow-container full-width">
+                <img src="/images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+                <div class="mySlides fade">
+                    <img src="/images/Pukapuka-Road-6.jpg" draggable="false">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/images/Pukapuka-Road-2.jpg" draggable="false">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/images/Pukapuka-Road-7.jpg" draggable="false">
+                </div>
+
+                <div class="dot-container" style="margin-left: 15px;">
+                    <span class="dot">
+                        <span class="dot-bg"></span>
+                        <span class="dot-fill"></span>
+                    </span>
+                    <span class="dot">
+                        <span class="dot-bg"></span>
+                        <span class="dot-fill"></span>
+                    </span>
+                    <span class="dot">
+                        <span class="dot-bg"></span>
+                        <span class="dot-fill"></span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grey">
+                <img src="/images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo"
+                    draggable="false">
+                <br><br><br><br>
+                <div style="display: contents;">
+                    <h1>TESTIMONIALS</h1>
+                    <h2 class="services-summary-1">“DON’T JUST TAKE OUR WORD FOR IT, SEE WHAT OUR CLIENTS HAVE TO SAY.”
+                    </h2>
+                    <br>
+                    <a class="button grey-bg" href="/contact">CONTACT US</a>
+                    <br><br>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: #ffff; padding: 40px;">
+            <div class="testimonial-full" style="max-width: 800px; margin: auto;">
+                <img src="/images/Quote.png" alt="" style="width: 50px;">
+                <h2 style="margin-top: 20px; color: #000;">
+                    <%= testimonial.author %>
+                </h2>
+                <p style="font-style: italic; color: #444;">
+                    <%= testimonial.location %>
+                </p>
+                <p style="margin-top: 20px; line-height: 1.6; white-space: pre-line;">
+                    <%= testimonial.message %>
+                </p>
+                <a href="/testimonials" class="button slim light-bg" style="margin-top: 20px; display: inline-block;">←
+                    BACK</a>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+</body>
+
+</html>

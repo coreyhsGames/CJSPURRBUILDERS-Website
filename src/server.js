@@ -15,29 +15,37 @@ app.set("views", path.join(__dirname, "views"));
 app.get("/", (req, res) => res.render("home", { activePage: "home" }));
 app.get("/about", (req, res) => res.render("about", { activePage: "about" }));
 app.get("/our-services", (req, res) => res.render("ourServices", { activePage: "ourServices" }));
-app.get("/testimonials", (req, res) => res.render("testimonials", { activePage: "testimonials" }));
 app.get("/contact", (req, res) => res.render("contact", { activePage: "contact" }));
 
 // Database setup
 const contactFormDB = new sqlite3.Database("src/db/contactForm.db", (err) => {
-    if (err) {
-        console.error("Error connecting to the contact form database: ", err.message);
-    } else {
-        console.log("Connected to the contact form database!");
-    }
+  if (err) {
+    console.error("Error connecting to the contact form database: ", err.message);
+  } else {
+    console.log("Connected to the contact form database!");
+  }
 });
 contactFormDB.run(`CREATE TABLE IF NOT EXISTS contactForm (id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, phone_num INTEGER, email TEXT, msg TEXT)`);
 
 const projectsDB = new sqlite3.Database("src/db/projects.db", (err) => {
-    if (err) {
-        console.error("Error connecting to the projects database: ", err.message);
-    } else {
-        console.log("Connected to the projects database!");
-    }
+  if (err) {
+    console.error("Error connecting to the projects database: ", err.message);
+  } else {
+    console.log("Connected to the projects database!");
+  }
 });
 projectsDB.run(`CREATE TABLE IF NOT EXISTS locations (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT UNIQUE NOT NULL)`);
 projectsDB.run(`CREATE TABLE IF NOT EXISTS projects (id INTEGER PRIMARY KEY AUTOINCREMENT, location_id INTEGER NOT NULL, name TEXT NOT NULL, FOREIGN KEY (location_id) REFERENCES locations(id))`);
 projectsDB.run(`CREATE TABLE IF NOT EXISTS photos (id INTEGER PRIMARY KEY AUTOINCREMENT, project_id INTEGER NOT NULL, photo_path TEXT NOT NULL, FOREIGN KEY (project_id) REFERENCES projects(id))`);
+
+const testimonialsDB = new sqlite3.Database("src/db/testimonials.db", (err) => {
+  if (err) {
+    console.error("Error connecting to the testimonials database: ", err.message);
+  } else {
+    console.log("Connected to the testimonials database!");
+  }
+});
+testimonialsDB.run(`CREATE TABLE IF NOT EXISTS testimonials (id INTEGER PRIMARY KEY AUTOINCREMENT, author TEXT NOT NULL, location TEXT NOT NULL, message TEXT NOT NULL, date_added DATETIME DEFAULT CURRENT_TIMESTAMP)`);
 
 // Redirect root URL (/) to your home page
 app.get("/", (req, res) => {
@@ -118,6 +126,20 @@ app.get("/projects/:locationId", (req, res) => {
   });
 });
 
+app.get("/testimonials", (req, res) => {
+  testimonialsDB.all("SELECT * FROM testimonials ORDER BY date_added DESC", (err, rows) => {
+    if (err) return res.status(500).send("Database error");
+    res.render("testimonials", { testimonials: rows, activePage: "testimonials" });
+  });
+});
+
+// Show one full testimonial
+app.get("/testimonial/:id", (req, res) => {
+  testimonialsDB.get("SELECT * FROM testimonials WHERE id = ?", [req.params.id], (err, row) => {
+    if (err || !row) return res.status(404).send("Testimonial not found");
+    res.render("testimonial-full", { testimonial: row, activePage: "testimonials" });
+  });
+});
 // 404 page redirect
 app.use((req, res) => {
   res.status(404).render("404", { activePage: "" });
