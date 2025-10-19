@@ -119,7 +119,7 @@
                     <div class="project-container">
                         <% categories[letter].forEach(location=> { %>
                             <a class="button" href="/projects/<%= location.id %>">
-                                <%= location.name %>
+                                <%= location.name.toUpperCase() %>
                             </a>
                             <% }) %>
                     </div>
