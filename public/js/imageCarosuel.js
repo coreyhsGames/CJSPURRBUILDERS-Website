@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all slideshows on page
+    // Initialise all slideshows on page
     const slideshows = document.querySelectorAll('.slideshow-container');
     
     slideshows.forEach((container, index) => {
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const slideshowId = `slideshow-${index}`;
         container.id = slideshowId;
         
-        // Initialize this slideshow
+        // Initialise this slideshow
         initSlideshow(slideshowId);
     });
 });
