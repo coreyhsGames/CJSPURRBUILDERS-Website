@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initSlideshow(containerId) {
     let slideIndex = 0;
-    let slideInterval;
     const slideDuration = 3000;
     
     const container = document.getElementById(containerId);
