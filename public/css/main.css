@@ -42,25 +42,20 @@ br {
     align-items: center;
     z-index: 10;
     justify-content: space-between;
-    height: 100px;
-    /* Set initial height */
-    transition: all 0.3s ease;
-    /* Smooth transition for height change */
+    height: 100px; /* Set initial height */
+    transition: all 0.3s ease; /* Smooth transition for height change */
 }
 
 /* Add a new class for the shrunk state */
 .nav-bar-horizontal.shrink {
-    height: 60px;
-    /* Reduced height */
+    height: 60px; /* Reduced height */
     background-color: rgba(0, 0, 0, 1);
 }
 
 .nav-bar-horizontal.shrink .logo {
-    width: 200px;
-    /* Smaller logo when shrunk */
+    width: 200px; /* Smaller logo when shrunk */
     padding: 15px;
-    transition: all 0.3s ease;
-    /* Smooth transition for logo */
+    transition: all 0.3s ease; /* Smooth transition for logo */
 }
 
 .nav-bar-horizontal div a,
@@ -70,8 +65,7 @@ br {
     padding: 10px 12px;
     text-decoration: none;
     font-size: 1.5rem;
-    transition: all 0.3s ease;
-    /* Changed to 'all' for smoother transitions */
+    transition: all 0.3s ease; /* Changed to 'all' for smoother transitions */
     margin: 0px 3px 0px 3px;
     border-radius: 10px;
     cursor: pointer;
@@ -90,8 +84,7 @@ br {
 }
 
 .nav-bar-horizontal.shrink .hamburger {
-    font-size: 2rem;
-    /* Smaller hamburger icon */
+    font-size: 2rem; /* Smaller hamburger icon */
 }
 
 .nav-bar-horizontal div a:hover,
@@ -108,8 +101,7 @@ br {
 .logo {
     width: 400px;
     padding: 15px;
-    transition: all 0.3s ease;
-    /* Smooth transition for logo */
+    transition: all 0.3s ease; /* Smooth transition for logo */
 }
 
 @media only screen and (max-width: 1550px) {
