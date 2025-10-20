@@ -1,22 +1,57 @@
+<!-- Horizontal Navigation Bar - Visible on larger screens -->
 <div class="nav-bar-horizontal">
-    <a href="/"><img src="/images/cj-spurr-logo-w.png" alt="cj-spurr-logo" class="logo" draggable="false"></a>
+    <!-- Company logo that links to home page -->
+    <a href="/">
+        <img src="/images/cj-spurr-logo-w.png" alt="cj-spurr-logo" class="logo" draggable="false">
+    </a>
+    
+    <!-- Main navigation links container -->
     <div style="margin-right: 25px;">
+        <!-- Home link with conditional active class -->
         <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">HOME</a>
+        
+        <!-- About link with conditional active class -->
         <a href="/about" class="<%= activePage === 'about' ? 'active' : '' %>">ABOUT</a>
+        
+        <!-- Our Services link with conditional active class -->
         <a href="/our-services" class="<%= activePage === 'ourServices' ? 'active' : '' %>">OUR SERVICES</a>
+        
+        <!-- Our Projects link with conditional active class -->
         <a href="/our-projects" class="<%= activePage === 'ourProjects' ? 'active' : '' %>">OUR PROJECTS</a>
+        
+        <!-- Testimonials link with conditional active class -->
         <a href="/testimonials" class="<%= activePage === 'testimonials' ? 'active' : '' %>">TESTIMONIALS</a>
+        
+        <!-- Contact link with conditional active class -->
         <a href="/contact" class="<%= activePage === 'contact' ? 'active' : '' %>">CONTACT</a>
     </div>
+    
+    <!-- Hamburger menu icon for mobile navigation -->
     <span id="hamburger" class="hamburger">&#9776;</span>
 </div>
 
+<!-- Vertical Navigation Bar - Hidden by default, shown on mobile screens -->
 <div id="vertical-nav-bar" class="nav-bar-vertical">
+    <!-- Close button for mobile menu -->
     <a href="javascript:void(0)" id="close-btn" class="close-btn">X</a>
+    
+    <!-- Mobile navigation links (same as horizontal nav but vertical layout) -->
+    
+    <!-- Home link with conditional active class -->
     <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">HOME</a>
+    
+    <!-- About link with conditional active class -->
     <a href="/about" class="<%= activePage === 'about' ? 'active' : '' %>">ABOUT</a>
+    
+    <!-- Our Services link with conditional active class -->
     <a href="/our-services" class="<%= activePage === 'ourServices' ? 'active' : '' %>">OUR SERVICES</a>
+    
+    <!-- Our Projects link with conditional active class -->
     <a href="/our-projects" class="<%= activePage === 'ourProjects' ? 'active' : '' %>">OUR PROJECTS</a>
+    
+    <!-- Testimonials link with conditional active class -->
     <a href="/testimonials" class="<%= activePage === 'testimonials' ? 'active' : '' %>">TESTIMONIALS</a>
+    
+    <!-- Contact link with conditional active class -->
     <a href="/contact" class="<%= activePage === 'contact' ? 'active' : '' %>">CONTACT</a>
 </div>

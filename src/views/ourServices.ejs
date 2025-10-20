@@ -2,46 +2,70 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon for browser tab -->
     <link rel="shortcut icon" href="images/cj-spurr-icon-w.png" type="image/x-icon">
+    
+    <!-- Google Fonts import for Montserrat font family -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/imageCarousel.css">
-    <link rel="stylesheet" href="css/ourServices.css">
-    <script defer src="js/verticalNavBar.js"></script>
-    <script defer src="js/autoImageCarousel.js"></script>
-    <script defer src="js/imageCarosuel.js"></script>
-    <script defer src="js/shrinkNavBar.js"></script>
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="css/main.css">              <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/imageCarousel.css">     <!-- Image carousel specific styles -->
+    <link rel="stylesheet" href="css/ourServices.css">       <!-- Services page specific styles -->
+    
+    <!-- JavaScript files (deferred to load after HTML parsing) -->
+    <script defer src="js/verticalNavBar.js"></script>      <!-- Mobile navigation functionality -->
+    <script defer src="js/autoImageCarousel.js"></script>   <!-- Auto-rotating image carousel -->
+    <script defer src="js/imageCarousel.js"></script>       <!-- Manual image carousel controls -->
+    <script defer src="js/shrinkNavBar.js"></script>        <!-- Navbar shrinking on scroll -->
+    
+    <!-- Page title displayed in browser tab -->
     <title>OUR SERVICES | C J SPURR BUILDERS LTD</title>
 </head>
 
 <body>
+    <!-- Include navigation bar partial -->
     <%- include('partials/navbar') %>
+    
+    <!-- Hero section with main carousel -->
     <section>
+        <!-- Full-width image carousel/slideshow container -->
         <div class="slideshow-container full-width">
+            <!-- Licensed Building Practitioner logo overlay -->
             <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            
+            <!-- Slide 1: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
             </div>
 
+            <!-- Slide 2: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
             </div>
 
+            <!-- Slide 3: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
             </div>
 
+            <!-- Carousel navigation dots -->
             <div class="dot-container" style="margin-left: 15px;">
+                <!-- Dot 1 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 2 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 3 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
@@ -49,39 +73,58 @@
             </div>
         </div>
 
+        <!-- Introduction section with grey background -->
         <div class="grey">
+            <!-- Company logo -->
             <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
             <br><br><br><br>
+            
+            <!-- Services page introduction content -->
             <div style="display: contents;">
+                <!-- Main page heading -->
                 <h1>OUR SERVICES</h1>
-                <h2 class="services-summary-1">“KEEPING OUR CLIENTS INFORMED THROUGHOUT THE ENTIRE PROCESS IS KEY TO
-                    WHAT WE DO”</h2>
+                <!-- Key service philosophy - communication focus -->
+                <h2 class="services-summary-1">"KEEPING OUR CLIENTS INFORMED THROUGHOUT THE ENTIRE PROCESS IS KEY TO
+                    WHAT WE DO"</h2>
                 <br>
+                <!-- Primary call-to-action button -->
                 <a class="button grey-bg" href="/contact">CONTACT US</a>
                 <br><br>
             </div>
         </div>
     </section>
+
+    <!-- Client-focused approach section -->
     <section class="about-us">
         <br><br>
+        <!-- Section heading emphasizing listening approach -->
         <h1 style="color: #000; text-align: center;">WE LISTEN</h1>
+        
+        <!-- Two-column layout: image carousel and text content -->
         <div class="div-center">
+            <!-- Square format image carousel/gallery -->
             <div class="slideshow-container square-gallery">
+                <!-- Slide 1: Sandspit project -->
                 <div class="mySlides fade">
                     <img src="images/Sandspit-Photo-New-1.jpg" alt="Sandspit-Photo-New-1" draggable="false">
                 </div>
 
+                <!-- Slide 2: Baddeleys Beach project -->
                 <div class="mySlides fade">
                     <img src="images/Baddeleys-Beach-4.jpg" alt="Baddeleys-Beach-4" draggable="false">
                 </div>
 
+                <!-- Slide 3: Rainbows End project -->
                 <div class="mySlides fade">
                     <img src="images/Rainbows-End-2.jpg" alt="Rainbows-End-2" draggable="false">
                 </div>
 
+                <!-- Previous slide arrow navigation -->
                 <a class="prev">&#10094;</a>
+                <!-- Next slide arrow navigation -->
                 <a class="next">&#10095;</a>
 
+                <!-- Carousel navigation dots (centered) -->
                 <div class="dot-container center">
                     <span class="dot">
                         <span class="dot-bg"></span>
@@ -97,28 +140,41 @@
                     </span>
                 </div>
             </div>
+            
+            <!-- Client-focused service philosophy content -->
             <div class="content">
+                <!-- Guidance and support promise -->
                 <p>At C J Spurr Builders Warkworth, we understand that the thought of building can be daunting. When you
                     build with us, you can be assured of our expert advice and experience to guide you through the whole
                     house building process from start to finish, from the earthworks right through to final completion
                     and Council signoff.
                 </p>
+                <!-- Communication emphasis -->
                 <p>Communication is key, so we will listen to you and walk you through every stage of the entire
                     building process.</p>
-                <p>We don’t stretch ourselves between multiple projects; you can be assured you will receive our full
+                <!-- Personal attention differentiator -->
+                <p>We don't stretch ourselves between multiple projects; you can be assured you will receive our full
                     attention. All builds are project managed by Chris Spurr personally at C J Spurr Builders. This is
                     our work ethic and we believe that this sets us apart from other house builders.</p>
+                <!-- Network and quality assurance -->
                 <p>Over the years, we have built solid relationships and alliances with excellent sub-contractors,
                     suppliers, designers, architects and engineers. This ensures a coordinated approach is taken, so
                     that each project is completed to an exceptional standard.</p>
                 <br>
+                <!-- Call-to-action button to projects page -->
                 <a class="button light-bg" href="/our-projects">OUR PROJECTS</a>
             </div>
         </div>
     </section>
+
+    <!-- Main services showcase section with grey background -->
     <section class="grey our-services">
+        <!-- Section heading -->
         <h1>OUR SERVICES</h1>
+        
+        <!-- Services cards container - three-column layout -->
         <div class="services-container">
+            <!-- Renovations service card -->
             <div class="services-card">
                 <img src="images/Leigh-6.jpg" alt="Leigh-6">
                 <h2>RENOVATIONS</h2>
@@ -126,12 +182,16 @@
                     Working with the right building team is absolutely critical to the success of your renovation
                     project. Knowing you can place full trust in your builder makes all the difference.</p>
             </div>
+            
+            <!-- New Builds service card -->
             <div class="services-card">
                 <img src="images/Pukapuka-Road-5.jpg" alt="Pukapuka-Road-5">
                 <h2>NEW BUILDS</h2>
                 <p>At C J Spurrs Builders we specialise in creating beautiful, architectural homes. If you are looking
-                    for a team of skilled tradespeople to construct your dream home, you’ve come to the right place.</p>
+                    for a team of skilled tradespeople to construct your dream home, you've come to the right place.</p>
             </div>
+            
+            <!-- Outdoor Areas service card -->
             <div class="services-card">
                 <img src="images/Sandspit-Photo-New-4.jpg" alt="Sandspit-Photo-New-4">
                 <h2>OUTDOOR AREAS</h2>
@@ -141,26 +201,38 @@
             </div>
         </div>
     </section>
+
+    <!-- Detailed services and project management section -->
     <section class="our-projects">
         <br><br>
-        <h1 style="color: #000; text-align: center;">“WE TAKE GREAT PERSONAL PRIDE IN EVERY PROJECT UNDERTAKEN”.</h1>
+        <!-- Company pride statement as heading -->
+        <h1 style="color: #000; text-align: center;">"WE TAKE GREAT PERSONAL PRIDE IN EVERY PROJECT UNDERTAKEN".</h1>
+        
+        <!-- Two-column layout: image carousel and detailed services list -->
         <div class="div-center">
+            <!-- Square format image carousel/gallery -->
             <div class="slideshow-container square-gallery">
+                <!-- Slide 1: Rainbows End project -->
                 <div class="mySlides fade">
                     <img src="images/Rainbows-End-5.jpg" alt="Rainbows-End-5" draggable="false">
                 </div>
 
+                <!-- Slide 2: Sandspit project -->
                 <div class="mySlides fade">
                     <img src="images/Sandspit-Photo-New-7.jpg" alt="Sandspit-Photo-New-7" draggable="false">
                 </div>
 
+                <!-- Slide 3: Quintal Matakana project -->
                 <div class="mySlides fade">
                     <img src="images/Quintal-Matakana-7.jpg" alt="Quintal-Matakana-7" draggable="false">
                 </div>
 
+                <!-- Previous slide arrow navigation -->
                 <a class="prev">&#10094;</a>
+                <!-- Next slide arrow navigation -->
                 <a class="next">&#10095;</a>
 
+                <!-- Carousel navigation dots (centered) -->
                 <div class="dot-container center">
                     <span class="dot">
                         <span class="dot-bg"></span>
@@ -176,12 +248,17 @@
                     </span>
                 </div>
             </div>
+            
+            <!-- Detailed services list content -->
             <div class="content">
+                <!-- Service scope overview -->
                 <p>We provide full building and project management services for new home builds, renovation and
                     alteration projects.
                 </p>
+                <!-- Introduction to specific services -->
                 <p>When it comes to residential building services, C J Spurr Builders Warkworth has a range of options
                     for you to select from including:</p>
+                <!-- Bulleted list of specific services offered -->
                 <ul>
                     <li>Architecturally designed homes</li>
                     <li>House additions</li>
@@ -191,50 +268,71 @@
                     <li>Hard landscaping (retaining and steps)</li>
                 </ul>
                 <br>
+                <!-- Call-to-action button to contact page -->
                 <a class="button light-bg" href="/contact">CONTACT US</a>
             </div>
         </div>
     </section>
+
+    <!-- Client testimonial section with light grey background -->
     <section style="background-color: #e1e1e1;">
         <div class="div-center" id="what-our-clients-say">
+            <!-- Testimonial heading with quote icon -->
             <div style="display: flex; align-items: center; width: 50%; margin-right: 20px;">
                 <img class="quote" src="images/Quote.png" alt="quote">
                 <h1 style="color: #000;">WHAT<br>OUR<br>CLIENTS<br>SAY...</h1>
             </div>
+            
+            <!-- Actual client testimonial content -->
             <div style="width: 55%; padding: 20px; margin-left: 20px;">
                 <hr>
                 <div>
+                    <!-- Client praise statements -->
                     <p>To say we are delighted with your work, would be an understatement.</p>
                     <p>We would have absolutely no hesitation in recommending C J Spurr Builders to any prospective
                         client.</p>
+                    <!-- Client signature -->
                     <p style="font-style: italic; font-weight: 700;">Ian Fair</p>
                 </div>
                 <hr>
                 <br>
+                <!-- Call-to-action button to testimonials page -->
                 <a class="button lighter-grey-bg" href="/testimonials">TESTIMONIALS</a>
             </div>
         </div>
     </section>
+
+    <!-- Local builders section emphasizing geographic service area -->
     <section class="our-projects">
         <br><br>
+        <!-- Section heading highlighting local presence -->
         <h1 style="color: #000; text-align: center;">LOCAL WARKWORTH HOUSE BUILDERS</h1>
+        
+        <!-- Two-column layout: image carousel and service area content -->
         <div class="div-center">
+            <!-- Square format image carousel/gallery -->
             <div class="slideshow-container square-gallery">
+                <!-- Slide 1: Quintal Matakana project (note: alt text typo - "uintal" should be "Quintal") -->
                 <div class="mySlides fade">
                     <img src="images/Quintal-Matakana-8.jpg" alt="uintal-Matakana-8" draggable="false">
                 </div>
 
+                <!-- Slide 2: Albro Lane Algies Bay project -->
                 <div class="mySlides fade">
                     <img src="images/Albro-Lane-Algies-Bay-1.jpg" alt="Albro-Lane-Algies-Bay-1" draggable="false">
                 </div>
 
+                <!-- Slide 3: Sandspit project -->
                 <div class="mySlides fade">
                     <img src="images/Sandspit-Photo-New-2.jpg" alt="Sandspit-Photo-New-2" draggable="false">
                 </div>
 
+                <!-- Previous slide arrow navigation -->
                 <a class="prev">&#10094;</a>
+                <!-- Next slide arrow navigation -->
                 <a class="next">&#10095;</a>
 
+                <!-- Carousel navigation dots (centered) -->
                 <div class="dot-container center">
                     <span class="dot">
                         <span class="dot-bg"></span>
@@ -250,34 +348,49 @@
                     </span>
                 </div>
             </div>
+            
+            <!-- Local service area and personal approach content -->
             <div class="content">
+                <!-- Geographic service area description -->
                 <p>You came to us because you were looking for house builders you can feel comfortable with and for
                     house builders whose work you can see. Over the years, we have built and renovated homes in Algies
                     Bay, Kaipara, Leigh, Mahurangi West, Mangawhai, Matakana, Maungataroto, Omaha, Pakiri, Rainbows End,
                     Riverhead, Sandspit, Scotts Landing, Snells Beach and Tawharanui, to name but a few places
                     throughout Rodney and North Auckland.
                 </p>
+                <!-- Direct involvement and project management approach -->
                 <p>We have worked on each and every project and personally overseen every detail. There is no middleman
                     when you build with C J Spurr Builders Warkworth, the work is done by us. Effective, personalised
                     project management and a passion for what we do means your dream home will happen without the
                     dramas.</p>
                 <br>
+                <!-- Call-to-action button to contact page -->
                 <a class="button light-bg" href="/contact">CONTACT US</a>
             </div>
         </div>
     </section>
+
+    <!-- Final call-to-action section with light grey background -->
     <section class="light grey">
         <div class="div-center" style="flex-direction: column;">
+            <!-- Personal attention promise -->
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <h1 class="quote-header">As Your Home Builders,<br>You Get Our Full Attention</h1>
+                <!-- Company logo -->
                 <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="bottom logo"
                     draggable="false">
             </div>
+            
+            <!-- Direct contact invitation with phone number -->
             <p style="color: #ffff; max-width: 60%;">Please call Chris Spurr on <a href="tel:027-276-6639"
                     style="text-decoration: none; font-weight: 800; color: #ffff;">027 276 6639</a> to talk about your next building project. He takes a truly personal interest in every build he does and looks forward to speaking with you.</p>
+            
+            <!-- Final contact CTA button -->
             <a class="button light-grey-bg" href="/contact">CONTACT US</a>
         </div>
     </section>
+
+    <!-- Include footer partial -->
     <%- include('partials/footer') %>
 </body>
 

@@ -2,46 +2,70 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon for browser tab -->
     <link rel="shortcut icon" href="images/cj-spurr-icon-w.png" type="image/x-icon">
+    
+    <!-- Google Fonts import for Montserrat font family -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/imageCarousel.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <script defer src="js/verticalNavBar.js"></script>
-    <script defer src="js/autoImageCarousel.js"></script>
-    <script defer src="js/imageCarosuel.js"></script>
-    <script defer src="js/shrinkNavBar.js"></script>
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="css/main.css">           <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/imageCarousel.css">  <!-- Image carousel specific styles -->
+    <link rel="stylesheet" href="css/contact.css">        <!-- Contact page specific styles -->
+    
+    <!-- JavaScript files (deferred to load after HTML parsing) -->
+    <script defer src="js/verticalNavBar.js"></script>      <!-- Mobile navigation functionality -->
+    <script defer src="js/autoImageCarousel.js"></script>   <!-- Auto-rotating image carousel -->
+    <script defer src="js/imageCarousel.js"></script>       <!-- Manual image carousel controls -->
+    <script defer src="js/shrinkNavBar.js"></script>        <!-- Navbar shrinking on scroll -->
+    
+    <!-- Page title displayed in browser tab -->
     <title>CONTACT | C J SPURR BUILDERS LTD</title>
 </head>
 
 <body>
+    <!-- Include navigation bar partial -->
     <%- include('partials/navbar') %>
+    
+    <!-- Hero section with main carousel -->
     <section>
+        <!-- Full-width image carousel/slideshow container -->
         <div class="slideshow-container full-width">
+            <!-- Licensed Building Practitioner logo overlay -->
             <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            
+            <!-- Slide 1: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
             </div>
 
+            <!-- Slide 2: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
             </div>
 
+            <!-- Slide 3: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
             </div>
 
+            <!-- Carousel navigation dots -->
             <div class="dot-container" style="margin-left: 15px;">
+                <!-- Dot 1 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 2 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 3 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
@@ -49,68 +73,107 @@
             </div>
         </div>
 
+        <!-- Introduction section with grey background -->
         <div class="grey">
+            <!-- Company logo -->
             <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
             <br><br><br><br>
+            
+            <!-- Contact page introduction content -->
             <div style="display: contents;">
+                <!-- Main page heading -->
                 <h1>CONTACT US</h1>
+                <!-- Company motto/quote (note: possible typo - "every WE BUILD" should likely be "every PROJECT WE BUILD") -->
                 <h2 class="services-summary-1">AT C J SPURR BUILDERS WE TAKE GREAT PERSONAL PRIDE IN EVERY WE BUILD.
                 </h2>
                 <br>
+                <!-- Call-to-action button (note: links to current page, could be redundant) -->
                 <a class="button grey-bg" href="/contact">CONTACT US</a>
                 <br><br>
             </div>
         </div>
     </section>
+
+    <!-- Main contact section with form and contact information -->
     <section class="contact-sect">
         <br><br>
+        <!-- Section heading emphasizing local focus and personal attention -->
         <h1 style="color: #000; text-align: center;">WE ARE LOCAL BUILDERS AND WE ARE AS FOCUSED ON THE CREATION OF YOUR
             HOME AS YOU ARE</h1>
+        
+        <!-- Two-column layout: contact form and information -->
         <div class="div-center">
+            <!-- Contact form for user inquiries -->
             <form id="contact-form">
+                <!-- First name input field -->
                 <input type="text" id="fname" name="first_name" placeholder="First Name (Required)">
+                <!-- Last name input field -->
                 <input type="text" id="lname" name="last_name" placeholder="Last Name (Required)">
+                <!-- Phone number input field -->
                 <input type="tel" id="phnumber" name="phone_num" placeholder="Phone Number (Required)">
+                <!-- Email input field -->
                 <input type="email" id="email" name="email" placeholder="Email (Required)">
+                <!-- Message textarea for detailed inquiries -->
                 <textarea rows="5" id="msg" name="msg" placeholder="Message (Required)"></textarea>
                 <br>
+                <!-- Form submission button -->
                 <button class="button light-bg" type="submit">GET IN TOUCH</button>
             </form>
+            
+            <!-- Contact information and service area details -->
             <div class="content">
+                <!-- Service area description listing local regions served -->
                 <p>As builders in Warkworth, we have built and renovated homes in Algies Bay, Kaipara, Leigh, Mahurangi
                     West, Mangawhai, Matakana, Maungataroto, Omaha, Pakiri, Rainbows End, Riverhead, Sandspit, Scotts
                     Landing, Snells Beach, Tawharanui to name but a few places throughout Rodney.</p>
+                <!-- Personal commitment statement -->
                 <p>Build with C J Spurr Builders Warkworth, and you put your home and your dreams in the hands of a
                     builder who really cares.</p>
+                
+                <!-- Direct contact methods section -->
                 <div>
                     <br>
+                    <!-- Contact methods heading -->
                     <h2 style="color: #000;">CONTACT US</h2>
+                    
+                    <!-- Contact methods container with icons and links -->
                     <div class="contact-us-container">
+                        <!-- Email contact method -->
                         <div>
+                            <!-- Email icon SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                                 <a href="mailto:spurrbuilders@gmail.com">
                                     <path
                                         d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
                                 </a>
                             </svg>
+                            <!-- Email link -->
                             <a href="mailto:spurrbuilders@gmail.com">spurrbuilders@gmail.com</a>
                         </div>
+                        
+                        <!-- Phone contact method -->
                         <div>
+                            <!-- Phone icon SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                                 <a href="tel:027-276-6639">
                                     <path
                                         d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z" />
                                 </a>
                             </svg>
+                            <!-- Phone link -->
                             <a href="tel:027-276-6639">027 276 6639</a>
                         </div>
+                        
+                        <!-- Social media contact method -->
                         <div>
+                            <!-- Facebook icon SVG -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                                 <a href="https://www.facebook.com/cjspurrbuildersltd/" target="_blank">
                                     <path
                                         d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z" />
                                 </a>
                             </svg>
+                            <!-- Facebook link (opens in new tab) -->
                             <a href="https://www.facebook.com/cjspurrbuildersltd/" target="_blank">Follow Us!</a>
                         </div>
                     </div>
@@ -118,35 +181,44 @@
             </div>
         </div>
     </section>
+
+    <!-- Include footer partial -->
     <%- include('partials/footer') %>
+    
+    <!-- JavaScript for handling form submission asynchronously -->
     <script>
+        // Get reference to the contact form
         const form = document.getElementById('contact-form');
 
+        // Add submit event listener to the form
         form.addEventListener('submit', async (e) => {
-            e.preventDefault(); // stop normal form POST
+            e.preventDefault(); // Prevent default form submission behavior (page reload)
 
+            // Convert form data to JavaScript object
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
             try {
+                // Send form data to server using Fetch API
                 const res = await fetch('/contact', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(data) // Convert data to JSON string
                 });
 
+                // Get response text from server
                 const text = await res.text();
-                alert(text);
+                alert(text); // Show server response to user
 
-
+                // Reset form if submission was successful
                 if (res.ok) form.reset();
             } catch (err) {
+                // Handle any errors that occur during form submission
                 console.error('Error:', err);
                 alert("Something went wrong.");
             }
         });
     </script>
 </body>
-
 
 </html>

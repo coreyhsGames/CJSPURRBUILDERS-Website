@@ -2,38 +2,130 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon for browser tab -->
     <link rel="shortcut icon" href="images/cj-spurr-icon-w.png" type="image/x-icon">
+    
+    <!-- Google Fonts import for Montserrat font family -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/imageCarousel.css">
-    <link rel="stylesheet" href="css/testimonials.css">
-    <script defer src="js/verticalNavBar.js"></script>
-    <script defer src="js/autoImageCarousel.js"></script>
-    <script defer src="js/imageCarosuel.js"></script>
-    <script defer src="js/shrinkNavBar.js"></script>
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="css/main.css">              <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/imageCarousel.css">     <!-- Image carousel specific styles -->
+    <link rel="stylesheet" href="css/testimonials.css">      <!-- Testimonials page specific styles -->
+    
+    <!-- JavaScript files (deferred to load after HTML parsing) -->
+    <script defer src="js/verticalNavBar.js"></script>      <!-- Mobile navigation functionality -->
+    <script defer src="js/autoImageCarousel.js"></script>   <!-- Auto-rotating image carousel -->
+    <script defer src="js/imageCarousel.js"></script>       <!-- Manual image carousel controls -->
+    <script defer src="js/shrinkNavBar.js"></script>        <!-- Navbar shrinking on scroll -->
+    
+    <!-- Page title displayed in browser tab -->
     <title>TESTIMONIALS | C J SPURR BUILDERS LTD</title>
 </head>
 
 <body>
+    <!-- Include navigation bar partial -->
     <%- include('partials/navbar') %>
-        <section>
-            <div class="slideshow-container full-width">
-                <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+    
+    <!-- Hero section with main carousel -->
+    <section>
+        <!-- Full-width image carousel/slideshow container -->
+        <div class="slideshow-container full-width">
+            <!-- Licensed Building Practitioner logo overlay -->
+            <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            
+            <!-- Slide 1: Pukapuka Road project image -->
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
+            </div>
+
+            <!-- Slide 2: Pukapuka Road project image -->
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
+            </div>
+
+            <!-- Slide 3: Pukapuka Road project image -->
+            <div class="mySlides fade">
+                <img src="images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
+            </div>
+
+            <!-- Carousel navigation dots -->
+            <div class="dot-container" style="margin-left: 15px;">
+                <!-- Dot 1 with background and fill elements for animation -->
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <!-- Dot 2 with background and fill elements for animation -->
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <!-- Dot 3 with background and fill elements for animation -->
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Introduction section with grey background -->
+        <div class="grey">
+            <!-- Company logo -->
+            <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
+            <br><br><br><br>
+            
+            <!-- Testimonials page introduction content -->
+            <div style="display: contents;">
+                <!-- Main page heading -->
+                <h1>TESTIMONIALS</h1>
+                <!-- Social proof statement encouraging trust through client voices -->
+                <h2 class="services-summary-1">"DON'T JUST TAKE OUR WORD FOR IT, SEE WHAT OUR CLIENTS HAVE TO SAY."
+                </h2>
+                <br>
+                <!-- Call-to-action button to contact page -->
+                <a class="button grey-bg" href="/contact">CONTACT US</a>
+                <br><br>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company reputation and service approach section -->
+    <section class="about-us">
+        <br><br>
+        <!-- Section heading emphasizing types of building work -->
+        <h1 style="color: #000; text-align: center;">NEW HOME AND RENOVATIONS BUILDERS</h1>
+        
+        <!-- Two-column layout: image carousel and text content -->
+        <div class="div-center">
+            <!-- Square format image carousel/gallery -->
+            <div class="slideshow-container square-gallery">
+                <!-- Slide 1: Sandspit project -->
                 <div class="mySlides fade">
-                    <img src="images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
+                    <img src="images/Sandspit-Photo-New-1.jpg" alt="Sandspit-Photo-New-1" draggable="false">
                 </div>
 
+                <!-- Slide 2: Baddeleys Beach project -->
                 <div class="mySlides fade">
-                    <img src="images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
+                    <img src="images/Baddeleys-Beach-4.jpg" alt="Baddeleys-Beach-4" draggable="false">
                 </div>
 
+                <!-- Slide 3: Rainbows End project -->
                 <div class="mySlides fade">
-                    <img src="images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
+                    <img src="images/Rainbows-End-2.jpg" alt="Rainbows-End-2" draggable="false">
                 </div>
 
-                <div class="dot-container" style="margin-left: 15px;">
+                <!-- Previous slide arrow navigation -->
+                <a class="prev">&#10094;</a>
+                <!-- Next slide arrow navigation -->
+                <a class="next">&#10095;</a>
+
+                <!-- Carousel navigation dots (centered) -->
+                <div class="dot-container center">
                     <span class="dot">
                         <span class="dot-bg"></span>
                         <span class="dot-fill"></span>
@@ -48,158 +140,149 @@
                     </span>
                 </div>
             </div>
-
-            <div class="grey">
-                <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo"
-                    draggable="false">
-                <br><br><br><br>
-                <div style="display: contents;">
-                    <h1>TESTIMONIALS</h1>
-                    <h2 class="services-summary-1">“DON’T JUST TAKE OUR WORD FOR IT, SEE WHAT OUR CLIENTS HAVE TO SAY.”
-                    </h2>
-                    <br>
-                    <a class="button grey-bg" href="/contact">CONTACT US</a>
-                    <br><br>
-                </div>
+            
+            <!-- Company reputation and client approach content -->
+            <div class="content">
+                <!-- Service philosophy and quality commitment -->
+                <p>We have built our reputation on our personalised service. We listen, we consult and we work with
+                    you as a team. We take personal responsibility for everything we build, and we do so with confidence
+                    because we build with care, skill and professionalism.
+                </p>
+                <!-- Geographic service area and client diversity -->
+                <p>Please take a look and see what our clients in Matakana, Algies Bay, Omaha, Mahurangi West, and
+                    more have to say about the homes we have built with them.</p>
+                <br>
+                <!-- Call-to-action button to services page -->
+                <a class="button light-bg" href="/ourServices">OUR SERVICES</a>
             </div>
-        </section>
-        <section class="about-us">
-            <br><br>
-            <h1 style="color: #000; text-align: center;">NEW HOME AND RENOVATIONS BUILDERS</h1>
-            <div class="div-center">
-                <div class="slideshow-container square-gallery">
-                    <div class="mySlides fade">
-                        <img src="images/Sandspit-Photo-New-1.jpg" alt="Sandspit-Photo-New-1" draggable="false">
-                    </div>
+        </div>
+    </section>
 
-                    <div class="mySlides fade">
-                        <img src="images/Baddeleys-Beach-4.jpg" alt="Baddeleys-Beach-4" draggable="false">
-                    </div>
+    <!-- Main testimonials gallery section with light grey background -->
+    <section style="background-color: #e1e1e1;">
+        <br><br>
+        <!-- Section heading for testimonials -->
+        <h1 style="color: #000; text-align: center;">TESTIMONIALS</h1>
+        <br>
+        
+        <!-- Sort button container -->
+        <div style="text-align: center; margin-bottom: 15px;">
+            <!-- Button to toggle testimonial sorting order -->
+            <button id="sortButton" class="button lighter-grey-bg">Sort: Newest First</button>
+        </div>
+        <br>
 
-                    <div class="mySlides fade">
-                        <img src="images/Rainbows-End-2.jpg" alt="Rainbows-End-2" draggable="false">
-                    </div>
-
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-
-                    <div class="dot-container center">
-                        <span class="dot">
-                            <span class="dot-bg"></span>
-                            <span class="dot-fill"></span>
-                        </span>
-                        <span class="dot">
-                            <span class="dot-bg"></span>
-                            <span class="dot-fill"></span>
-                        </span>
-                        <span class="dot">
-                            <span class="dot-bg"></span>
-                            <span class="dot-fill"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="content">
-                    <p>We have built our reputation on our personalised service. We listen, we consult and we work with
-                        you
-                        as a team. We take personal responsibility for everything we build, and we do so with confidence
-                        because we build with care, skill and professionalism.
-                    </p>
-                    <p>Please take a look and see what our clients in Matakana, Algies Bay, Omaha, Mahurangi West, and
-                        more
-                        have to say about the homes we have built with them.</p>
-                    <br>
-                    <a class="button light-bg" href="/ourServices">OUR SERVICES</a>
-                </div>
-            </div>
-        </section>
-        <section style="background-color: #e1e1e1;">
-            <br><br>
-            <h1 style="color: #000; text-align: center;">TESTIMONIALS</h1>
-            <br>
-            <div style="text-align: center; margin-bottom: 15px;">
-                <button id="sortButton" class="button lighter-grey-bg">Sort: Newest First</button>
-            </div>
-            <br>
-
-            <div class="testimonial-carousel">
-                <div class="testimonial-container" id="testimonialList">
-                    <% testimonials.forEach(t=> { %>
-                        <div class="testimonial" data-date="<%= t.date %>">
-                            <img class="quote" src="/images/Quote.png" alt="quote">
-                            <div class="review-content">
-                                <p class="testimonial-text" data-full-text="<%= t.message %>">
-                                    <%= t.message %>
-                                </p>
-                                <a class="button slim light-bg" href="/testimonial/<%= t.id %>">VIEW MORE</a>
-                            </div>
-                            <div class="review-author">
-                                <br>
-                                <strong>
-                                    <%= t.author %>
-                                </strong>
-                                <p style="font-style: italic;">
-                                    <%= t.location %>
-                                </p>
-                            </div>
+        <!-- Testimonials container with carousel layout -->
+        <div class="testimonial-carousel">
+            <!-- Container for all testimonial cards - JavaScript will manipulate order -->
+            <div class="testimonial-container" id="testimonialList">
+                <!-- Loop through each testimonial in the testimonials array -->
+                <% testimonials.forEach(t=> { %>
+                    <!-- Individual testimonial card with data-date attribute for sorting -->
+                    <div class="testimonial" data-date="<%= t.date %>">
+                        <!-- Quote icon for visual consistency -->
+                        <img class="quote" src="/images/Quote.png" alt="quote">
+                        
+                        <!-- Testimonial content area -->
+                        <div class="review-content">
+                            <!-- Testimonial text with truncation functionality -->
+                            <!-- data-full-text stores complete message for truncation logic -->
+                            <p class="testimonial-text" data-full-text="<%= t.message %>">
+                                <%= t.message %>
+                            </p>
+                            <!-- Link to individual testimonial page -->
+                            <a class="button slim light-bg" href="/testimonial/<%= t.id %>">VIEW MORE</a>
                         </div>
-                        <% }) %>
-                </div>
+                        
+                        <!-- Testimonial author information -->
+                        <div class="review-author">
+                            <br>
+                            <!-- Client name -->
+                            <strong>
+                                <%= t.author %>
+                            </strong>
+                            <!-- Client location/project -->
+                            <p style="font-style: italic;">
+                                <%= t.location %>
+                            </p>
+                        </div>
+                    </div>
+                <% }) %>
             </div>
-            <br><br><br>
-        </section>
-        <section class="light grey">
-            <div class="div-center" style="flex-direction: column;">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                    <h1 class="quote-header">Hands-on<br>Warkworth Builders</h1>
-                    <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="bottom logo"
-                        draggable="false">
-                </div>
-                <p style="color: #ffff; max-width: 60%;">To discuss your plans or make an enquiry about building a new
-                    home
-                    or a renovation project, call Chris Spurr on <a href="tel:027-276-6639"
-                        style="text-decoration: none; font-weight: 800; color: #ffff;">027 276 6639</a> or send an
-                    email. C
-                    J Spurr Builders in Warkworth offers building solutions throughout Rodney, North Auckland and the
-                    Kaipara.</p>
-                <a class="button light-grey-bg" href="/contact">CONTACT US</a>
+        </div>
+        <br><br><br>
+    </section>
+
+    <!-- Final call-to-action section with light grey background -->
+    <section class="light grey">
+        <div class="div-center" style="flex-direction: column;">
+            <!-- Local builders emphasis -->
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h1 class="quote-header">Hands-on<br>Warkworth Builders</h1>
+                <!-- Company logo -->
+                <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="bottom logo"
+                    draggable="false">
             </div>
-        </section>
-        <%- include('partials/footer') %>
-            <script>
-                // Responsive truncation based on screen width
-                function truncateText() {
-                    document.querySelectorAll(".testimonial-text").forEach(p => {
-                        const fullText = p.dataset.fullText;
-                        let wordLimit = 50;
+            
+            <!-- Contact invitation with multiple methods -->
+            <p style="color: #ffff; max-width: 60%;">To discuss your plans or make an enquiry about building a new
+                home or a renovation project, call Chris Spurr on <a href="tel:027-276-6639"
+                    style="text-decoration: none; font-weight: 800; color: #ffff;">027 276 6639</a> or send an
+                email. C J Spurr Builders in Warkworth offers building solutions throughout Rodney, North Auckland and the
+                Kaipara.</p>
+            
+            <!-- Final contact CTA button -->
+            <a class="button light-grey-bg" href="/contact">CONTACT US</a>
+        </div>
+    </section>
 
-                        if (window.innerWidth < 480) wordLimit = 20;
-                        else if (window.innerWidth < 768) wordLimit = 35;
-                        else if (window.innerWidth < 1024) wordLimit = 45;
+    <!-- Include footer partial -->
+    <%- include('partials/footer') %>
+    
+    <!-- JavaScript for testimonial functionality -->
+    <script>
+        // Responsive text truncation based on screen width
+        function truncateText() {
+            // Select all testimonial text elements
+            document.querySelectorAll(".testimonial-text").forEach(p => {
+                // Get the full text from data attribute
+                const fullText = p.dataset.fullText;
+                // Set default word limit
+                let wordLimit = 50;
 
-                        const words = fullText.split(" ");
-                        p.textContent = words.length > wordLimit
-                            ? words.slice(0, wordLimit).join(" ") + "..."
-                            : fullText;
-                    });
-                }
+                // Adjust word limit based on screen width for responsive design
+                if (window.innerWidth < 480) wordLimit = 20;      // Mobile phones
+                else if (window.innerWidth < 768) wordLimit = 35; // Tablets
+                else if (window.innerWidth < 1024) wordLimit = 45; // Small desktops
 
-                truncateText();
-                window.addEventListener("resize", truncateText);
+                // Split text into words and truncate if necessary
+                const words = fullText.split(" ");
+                p.textContent = words.length > wordLimit
+                    ? words.slice(0, wordLimit).join(" ") + "..."  // Truncated text with ellipsis
+                    : fullText;                                    // Full text if within limit
+            });
+        }
 
-                // Sorting functionality
-                const sortBtn = document.getElementById("sortButton");
-                const container = document.getElementById("testimonialList");
-                let isNewestFirst = true;
+        // Initialize truncation on page load
+        truncateText();
+        // Re-truncate text when window is resized
+        window.addEventListener("resize", truncateText);
 
-                sortBtn.addEventListener("click", () => {
-                    // Toggle between normal and reversed order
-                    container.style.flexDirection = isNewestFirst ? "column-reverse" : "column";
-                    isNewestFirst = !isNewestFirst;
+        // Sorting functionality for testimonials
+        const sortBtn = document.getElementById("sortButton");
+        const container = document.getElementById("testimonialList");
+        let isNewestFirst = true;  // Track current sort state
 
-                    // Update button text
-                    sortBtn.textContent = isNewestFirst ? "Sort: Newest First" : "Sort: Oldest First";
-                });
-            </script>
+        // Add click event listener to sort button
+        sortBtn.addEventListener("click", () => {
+            // Toggle between normal (newest first) and reversed (oldest first) order
+            container.style.flexDirection = isNewestFirst ? "column-reverse" : "column";
+            isNewestFirst = !isNewestFirst;  // Flip the sort state
+
+            // Update button text to reflect current sort order
+            sortBtn.textContent = isNewestFirst ? "Sort: Newest First" : "Sort: Oldest First";
+        });
+    </script>
 </body>
 
 </html>

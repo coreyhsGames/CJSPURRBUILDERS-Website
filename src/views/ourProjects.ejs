@@ -2,46 +2,70 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon for browser tab -->
     <link rel="shortcut icon" href="images/cj-spurr-icon-w.png" type="image/x-icon">
+    
+    <!-- Google Fonts import for Montserrat font family -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/imageCarousel.css">
-    <link rel="stylesheet" href="css/ourProjects.css">
-    <script defer src="js/verticalNavBar.js"></script>
-    <script defer src="js/autoImageCarousel.js"></script>
-    <script defer src="js/imageCarosuel.js"></script>
-    <script defer src="js/shrinkNavBar.js"></script>
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="css/main.css">              <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/imageCarousel.css">     <!-- Image carousel specific styles -->
+    <link rel="stylesheet" href="css/ourProjects.css">       <!-- Projects page specific styles -->
+    
+    <!-- JavaScript files (deferred to load after HTML parsing) -->
+    <script defer src="js/verticalNavBar.js"></script>      <!-- Mobile navigation functionality -->
+    <script defer src="js/autoImageCarousel.js"></script>   <!-- Auto-rotating image carousel -->
+    <script defer src="js/imageCarousel.js"></script>       <!-- Manual image carousel controls -->
+    <script defer src="js/shrinkNavBar.js"></script>        <!-- Navbar shrinking on scroll -->
+    
+    <!-- Page title displayed in browser tab -->
     <title>OUR PROJECTS | C J SPURR BUILDERS LTD</title>
 </head>
 
 <body>
+    <!-- Include navigation bar partial -->
     <%- include('partials/navbar') %>
+    
+    <!-- Hero section with main carousel -->
     <section>
+        <!-- Full-width image carousel/slideshow container -->
         <div class="slideshow-container full-width">
+            <!-- Licensed Building Practitioner logo overlay -->
             <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            
+            <!-- Slide 1: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
             </div>
 
+            <!-- Slide 2: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
             </div>
 
+            <!-- Slide 3: Pukapuka Road project image -->
             <div class="mySlides fade">
                 <img src="images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
             </div>
 
+            <!-- Carousel navigation dots -->
             <div class="dot-container" style="margin-left: 15px;">
+                <!-- Dot 1 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 2 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 3 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
@@ -49,38 +73,57 @@
             </div>
         </div>
 
+        <!-- Introduction section with grey background -->
         <div class="grey">
+            <!-- Company logo -->
             <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
             <br><br><br><br>
+            
+            <!-- Projects page introduction content -->
             <div style="display: contents;">
+                <!-- Main page heading -->
                 <h1>OUR PROJECTS</h1>
-                <h2 class="services-summary-1">“WE’VE BEEN BUILDING BEAUTIFUL HOME FOR OVER 25 YEARS.”</h2>
+                <!-- Company experience statement (note: possible typo - "HOME" should likely be "HOMES") -->
+                <h2 class="services-summary-1">"WE'VE BEEN BUILDING BEAUTIFUL HOME FOR OVER 25 YEARS."</h2>
                 <br>
+                <!-- Call-to-action button to contact page -->
                 <a class="button grey-bg" href="/contact">CONTACT US</a>
                 <br><br>
             </div>
         </div>
     </section>
+
+    <!-- Project inspiration and work showcase section -->
     <section class="about-us">
         <br><br>
+        <!-- Section heading about building work and inspiration -->
         <h1 style="color: #000; text-align: center;">OUR BUILDING WORK AND SOME INSPIRATION</h1>
+        
+        <!-- Two-column layout: image carousel and text content -->
         <div class="div-center">
+            <!-- Square format image carousel/gallery -->
             <div class="slideshow-container square-gallery">
+                <!-- Slide 1: Sandspit project -->
                 <div class="mySlides fade">
                     <img src="images/Sandspit-Photo-New-1.jpg" alt="Sandspit-Photo-New-1" draggable="false">
                 </div>
 
+                <!-- Slide 2: Baddeleys Beach project -->
                 <div class="mySlides fade">
                     <img src="images/Baddeleys-Beach-4.jpg" alt="Baddeleys-Beach-4" draggable="false">
                 </div>
 
+                <!-- Slide 3: Rainbows End project -->
                 <div class="mySlides fade">
                     <img src="images/Rainbows-End-2.jpg" alt="Rainbows-End-2" draggable="false">
                 </div>
 
+                <!-- Previous slide arrow navigation -->
                 <a class="prev">&#10094;</a>
+                <!-- Next slide arrow navigation -->
                 <a class="next">&#10095;</a>
 
+                <!-- Carousel navigation dots (centered) -->
                 <div class="dot-container center">
                     <span class="dot">
                         <span class="dot-bg"></span>
@@ -96,52 +139,81 @@
                     </span>
                 </div>
             </div>
+            
+            <!-- Project description and purpose content -->
             <div class="content">
+                <!-- Introduction to project showcase -->
                 <p>We want to share some ideas and houses we thought you would love just as much as we do. We have put
                     together some images of what we have renovated or built from scratch.
                 </p>
+                <!-- Company philosophy and client focus -->
                 <p>As local Rodney residential builders, we take pride in our work and always go the extra mile for our
                     clients. Making sure everybody is happy is part of what we do.</p>
                 <br>
+                <!-- Call-to-action button to services page -->
                 <a class="button light-bg" href="/our-services">OUR SERVICES</a>
             </div>
         </div>
     </section>
+
+    <!-- Main projects directory section with light grey background -->
     <section style="background-color: #e1e1e1;">
         <br><br>
+        <!-- Section heading for projects list -->
         <h1 style="color: #000; text-align: center;">LIST OF PROJECTS</h1>
+        
+        <!-- Projects categorized by alphabetical sections -->
         <div class="project-category-container">
+            <!-- Loop through each letter category in the categories object -->
             <% for (let letter in categories) { %>
+                <!-- Individual category section for each letter -->
                 <div class="project-category">
+                    <!-- Alphabetical section heading -->
                     <h3>
-                        <%= letter %>
+                        <%= letter %>  <!-- Display the letter (A, B, C, etc.) -->
                     </h3>
+                    
+                    <!-- Container for location buttons within this category -->
                     <div class="project-container">
+                        <!-- Loop through each location in the current letter category -->
                         <% categories[letter].forEach(location=> { %>
+                            <!-- Clickable button linking to individual project location page -->
                             <a class="button" href="/projects/<%= location.id %>">
+                                <!-- Display location name in uppercase -->
                                 <%= location.name.toUpperCase() %>
                             </a>
-                            <% }) %>
+                        <% }) %>
                     </div>
                 </div>
-                <% } %>
+            <% } %>
         </div>
         <br>
     </section>
+
+    <!-- Final call-to-action section with light grey background -->
     <section class="light grey">
         <div class="div-center" style="flex-direction: column;">
+            <!-- Inspiration and help offer -->
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <!-- Call-to-action heading (note: typo - "inspriation" should be "inspiration") -->
                 <h1 class="quote-header">Looking for inspriation?<br>We can help.</h1>
+                <!-- Company logo -->
                 <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="bottom logo"
                     draggable="false">
             </div>
+            
+            <!-- Personal invitation with direct phone contact -->
             <p style="color: #ffff; max-width: 60%;">To discuss your plans or make an enquiry about building a new home
                 or a renovation project, call Chris Spurr on <a href="tel:027-276-6639"
                     style="text-decoration: none; font-weight: 800; color: #ffff;">027 276 6639</a>, your local
                 residential builders In Warkworth.</p>
+            
+            <!-- Final contact CTA button -->
             <a class="button light-grey-bg" href="/contact">CONTACT US</a>
         </div>
     </section>
+
+    <!-- Include footer partial -->
     <%- include('partials/footer') %>
 </body>
 

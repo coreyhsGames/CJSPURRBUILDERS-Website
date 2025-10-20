@@ -2,84 +2,128 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon for browser tab -->
     <link rel="shortcut icon" href="/images/cj-spurr-icon-w.png" type="image/x-icon">
+    
+    <!-- Google Fonts import for Montserrat font family -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/imageCarousel.css">
-    <link rel="stylesheet" href="/css/ourProjects.css">
-    <script defer src="/js/verticalNavBar.js"></script>
-    <script defer src="/js/autoImageCarousel.js"></script>
-    <script defer src="/js/shrinkNavBar.js"></script>
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">              <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/css/imageCarousel.css">     <!-- Image carousel specific styles -->
+    <link rel="stylesheet" href="/css/ourProjects.css">       <!-- Projects page styles (reused for testimonials) -->
+    
+    <!-- JavaScript files (deferred to load after HTML parsing) -->
+    <script defer src="/js/verticalNavBar.js"></script>      <!-- Mobile navigation functionality -->
+    <script defer src="/js/autoImageCarousel.js"></script>   <!-- Auto-rotating image carousel -->
+    <script defer src="/js/shrinkNavBar.js"></script>        <!-- Navbar shrinking on scroll -->
+    
+    <!-- Page title displayed in browser tab -->
     <title>TESTIMONIALS | C J SPURR BUILDERS LTD</title>
 </head>
 
 <body>
+    <!-- Include navigation bar partial -->
     <%- include('partials/navbar') %>
-        <section>
-            <div class="slideshow-container full-width">
-                <img src="/images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
-                <div class="mySlides fade">
-                    <img src="/images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="/images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="/images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
-                </div>
-
-                <div class="dot-container" style="margin-left: 15px;">
-                    <span class="dot">
-                        <span class="dot-bg"></span>
-                        <span class="dot-fill"></span>
-                    </span>
-                    <span class="dot">
-                        <span class="dot-bg"></span>
-                        <span class="dot-fill"></span>
-                    </span>
-                    <span class="dot">
-                        <span class="dot-bg"></span>
-                        <span class="dot-fill"></span>
-                    </span>
-                </div>
+    
+    <!-- Hero section with main carousel -->
+    <section>
+        <!-- Full-width image carousel/slideshow container -->
+        <div class="slideshow-container full-width">
+            <!-- Licensed Building Practitioner logo overlay -->
+            <img src="/images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            
+            <!-- Slide 1: Pukapuka Road project image -->
+            <div class="mySlides fade">
+                <img src="/images/Pukapuka-Road-6.jpg" alt="Pukapuka-Road-6" draggable="false">
             </div>
 
-            <div class="grey">
-                <img src="/images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo"
-                    draggable="false">
-                <br><br><br><br>
-                <div style="display: contents;">
-                    <h1>TESTIMONIALS</h1>
-                    <h2 class="services-summary-1">“DON’T JUST TAKE OUR WORD FOR IT, SEE WHAT OUR CLIENTS HAVE TO SAY.”
-                    </h2>
-                    <br>
-                    <a class="button grey-bg" href="/contact">CONTACT US</a>
-                    <br><br>
-                </div>
+            <!-- Slide 2: Pukapuka Road project image -->
+            <div class="mySlides fade">
+                <img src="/images/Pukapuka-Road-2.jpg" alt="Pukapuka-Road-2" draggable="false">
             </div>
-        </section>
-        <section style="background-color: #ffff; padding: 40px;">
-            <div class="testimonial-full" style="max-width: 800px; margin: auto;">
-                <img src="/images/Quote.png" alt="quote" style="width: 50px;">
-                <h2 style="margin-top: 20px; color: #000;">
-                    <%= testimonial.author %>
+
+            <!-- Slide 3: Pukapuka Road project image -->
+            <div class="mySlides fade">
+                <img src="/images/Pukapuka-Road-7.jpg" alt="Pukapuka-Road-7" draggable="false">
+            </div>
+
+            <!-- Carousel navigation dots -->
+            <div class="dot-container" style="margin-left: 15px;">
+                <!-- Dot 1 with background and fill elements for animation -->
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <!-- Dot 2 with background and fill elements for animation -->
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+                <!-- Dot 3 with background and fill elements for animation -->
+                <span class="dot">
+                    <span class="dot-bg"></span>
+                    <span class="dot-fill"></span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Introduction section with grey background -->
+        <div class="grey">
+            <!-- Company logo -->
+            <img src="/images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
+            <br><br><br><br>
+            
+            <!-- Testimonials page introduction content -->
+            <div style="display: contents;">
+                <!-- Main page heading -->
+                <h1>TESTIMONIALS</h1>
+                <!-- Social proof statement encouraging trust through client voices -->
+                <h2 class="services-summary-1">"DON'T JUST TAKE OUR WORD FOR IT, SEE WHAT OUR CLIENTS HAVE TO SAY."
                 </h2>
-                <p style="font-style: italic; color: #444;">
-                    <%= testimonial.location %>
-                </p>
-                <p style="margin-top: 20px; line-height: 1.6; white-space: pre-line;">
-                    <%= testimonial.message %>
-                </p>
-                <a href="/testimonials" class="button slim light-bg" style="margin-top: 20px; display: inline-block;">←
-                    BACK</a>
+                <br>
+                <!-- Call-to-action button to contact page -->
+                <a class="button grey-bg" href="/contact">CONTACT US</a>
+                <br><br>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <%- include('partials/footer') %>
+    <!-- Individual testimonial display section with white background -->
+    <section style="background-color: #ffff; padding: 40px;">
+        <!-- Container for the full testimonial content, centered with max-width -->
+        <div class="testimonial-full" style="max-width: 800px; margin: auto;">
+            <!-- Quote icon for visual emphasis -->
+            <img src="/images/Quote.png" alt="quote" style="width: 50px;">
+            
+            <!-- Testimonial author name - dynamically inserted from EJS variable -->
+            <h2 style="margin-top: 20px; color: #000;">
+                <%= testimonial.author %>
+            </h2>
+            
+            <!-- Testimonial location/project - dynamically inserted from EJS variable -->
+            <p style="font-style: italic; color: #444;">
+                <%= testimonial.location %>
+            </p>
+            
+            <!-- Main testimonial message - dynamically inserted from EJS variable -->
+            <!-- white-space: pre-line preserves line breaks from the original text -->
+            <p style="margin-top: 20px; line-height: 1.6; white-space: pre-line;">
+                <%= testimonial.message %>
+            </p>
+            
+            <!-- Navigation button to return to main testimonials list -->
+            <a href="/testimonials" class="button slim light-bg" style="margin-top: 20px; display: inline-block;">←
+                BACK</a>
+        </div>
+    </section>
+
+    <!-- Include footer partial -->
+    <%- include('partials/footer') %>
 </body>
 
 </html>

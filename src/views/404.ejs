@@ -2,44 +2,68 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon for browser tab -->
     <link rel="shortcut icon" href="images/cj-spurr-icon-w.png" type="image/x-icon">
+    
+    <!-- Google Fonts import for Montserrat font family -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/imageCarousel.css">
-    <script defer src="js/verticalNavBar.js"></script>
-    <script defer src="js/autoImageCarousel.js"></script>
-    <script defer src="js/shrinkNavBar.js"></script>
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="css/main.css">           <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/imageCarousel.css">  <!-- Image carousel specific styles -->
+    
+    <!-- JavaScript files (deferred to load after HTML parsing) -->
+    <script defer src="js/verticalNavBar.js"></script>      <!-- Mobile navigation functionality -->
+    <script defer src="js/autoImageCarousel.js"></script>   <!-- Auto-rotating image carousel -->
+    <script defer src="js/shrinkNavBar.js"></script>        <!-- Navbar shrinking on scroll -->
+    
+    <!-- Page title displayed in browser tab -->
     <title>C J SPURR BUILDERS LTD</title>
 </head>
 
 <body>
+    <!-- Include navigation bar partial -->
     <%- include('partials/navbar') %>
+    
+    <!-- Main content section -->
     <section>
+        <!-- Image carousel/slideshow container -->
         <div class="slideshow-container full-width">
+            <!-- Licensed Building Practitioner logo overlay -->
             <img src="images/LBPLogo.png" alt="licensed building practitioner logo" class="lbp-logo">
+            
+            <!-- Slide 1: Albro Lane Algies Bay image -->
             <div class="mySlides fade">
                 <img src="images/Albro-Lane-Algies-Bay-3.jpg" alt="Albro-Lane-Algies-Bay-3" draggable="false">
             </div>
 
+            <!-- Slide 2: Albro Lane Algies Bay image -->
             <div class="mySlides fade">
                 <img src="images/Albro-Lane-Algies-Bay-8.jpg" alt="Albro-Lane-Algies-Bay-8" draggable="false">
             </div>
 
+            <!-- Slide 3: Albro Lane Algies Bay image -->
             <div class="mySlides fade">
                 <img src="images/Albro-Lane-Algies-Bay-9.jpg" alt="Albro-Lane-Algies-Bay-9" draggable="false">
             </div>
 
+            <!-- Carousel navigation dots -->
             <div class="dot-container" style="margin-left: 15px;">
+                <!-- Dot 1 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 2 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
                 </span>
+                <!-- Dot 3 with background and fill elements for animation -->
                 <span class="dot">
                     <span class="dot-bg"></span>
                     <span class="dot-fill"></span>
@@ -47,18 +71,27 @@
             </div>
         </div>
 
+        <!-- 404 Error message section with grey background -->
         <div class="grey">
+            <!-- Company logo -->
             <img src="images/cj-spurr-icon-w.png" alt="C J SPURR BUILDERS LTD Logo" class="top logo" draggable="false">
             <br><br><br><br>
+            
+            <!-- Error message content -->
             <div style="display: contents;">
+                <!-- Main error heading -->
                 <h1>PAGE NOT FOUND</h1>
-                <h2>SORRY, THE PAGE YOU’RE LOOKING FOR DOESN’T EXIST</h2>
+                <!-- Secondary error message -->
+                <h2>SORRY, THE PAGE YOU'RE LOOKING FOR DOESN'T EXIST</h2>
                 <br>
+                <!-- Button to return to home page -->
                 <a class="button grey-bg" href="/">GO BACK</a>
                 <br><br>
             </div>
         </div>
     </section>
+    
+    <!-- Include footer partial -->
     <%- include('partials/footer') %>
 </body>
 
