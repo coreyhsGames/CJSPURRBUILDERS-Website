@@ -63,7 +63,7 @@ br {
     /* Smooth transition for logo */
 }
 
-.nav-bar-horizontal a,
+.nav-bar-horizontal div a,
 .nav-bar-horizontal .hamburger {
     color: #f2f2f2;
     text-align: center;
@@ -78,7 +78,7 @@ br {
 }
 
 /* Reduce padding when shrunk */
-.nav-bar-horizontal.shrink a,
+.nav-bar-horizontal.shrink div a,
 .nav-bar-horizontal.shrink .hamburger {
     padding: 8px 12px;
     font-size: 1.3rem;
@@ -94,12 +94,12 @@ br {
     /* Smaller hamburger icon */
 }
 
-.nav-bar-horizontal a:hover,
+.nav-bar-horizontal div a:hover,
 .nav-bar-horizontal .hamburger:hover {
     background-color: #3b3a52;
 }
 
-.nav-bar-horizontal a.active,
+.nav-bar-horizontal div a.active,
 .nav-bar-vertical a.active {
     background-color: #A3A380;
     font-weight: bold;
