@@ -48,21 +48,6 @@ function initSlideshow(containerId) {
             cancelAnimationFrame(animationFrame);
         }
         
-        let startTime = Date.now();
-        
-        function updateProgress() {
-            const elapsed = Date.now() - startTime;
-            const progress = Math.min(elapsed / slideDuration * 100, 100);
-            fillElement.style.width = progress + "%";
-            
-            if (progress < 100) {
-                animationFrame = requestAnimationFrame(updateProgress);
-            } else {
-                slideIndex++;
-                showSlides();
-            }
-        }
-        
         // Add smooth transition for the fill
         fillElement.style.transition = "width " + slideDuration + "ms linear";
         fillElement.style.width = "100%";
